@@ -15,10 +15,10 @@
 ちなみに計算結果の回収にはWSLを入れている人、もしくはMacを使用している人なら「rsync」というコマンドが便利です。
 例えば、
 ```
-rsync -r -av michishita@192.xxx.xxx.xx:./Data/ /home/ymichishita/Data/
+rsync -r -av michishita@192.xxx.xxx.xx:./Data/ /home/ymichishita/Document/Data/
 ```
-とlocal(自分の)PCで打つと、計算機の中の./Data/以下の中身を、localのPCの~/Data/以下に同期してくれます。便利です。(-r　はディレクトリごと同期するオプションで、 -av　は同期した時の変更点をリスト表示してくれます。)
-ちなみに僕はコードファイルを転送する時にもこれを使ってます。例えばこんな感じ。
+とlocal(自分の)PCで打つと、計算機の中の./Data/以下の中身を、localのPCの/home/~/Data/以下に同期してくれます。便利です。(-r　はディレクトリごと同期するオプションで、 -av　は同期した時の変更点をリスト表示してくれます。)
+ちなみに僕はコードファイルを転送する時にもこれを使ってます。例えばこんな感じ。(僕はCodesというディレクトリを作り、その中にそれぞれの言語のディレクトリを作ってます)
 ```
-rsync -av -r ./julia/ michishita@192.xxx.xxx.xx:./julia/
+rsync -av -r /home/ymichishita/Document/Codes/julia/ michishita@192.xxx.xxx.xx:./Codes/julia/
 ```
